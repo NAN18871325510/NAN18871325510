@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的作品集 | UI/UX Designer</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="#home">DESIGNER<span class="dot">.</span></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">首页</a></li>
+            <li><a href="#portfolio">作品集</a></li>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#contact">联系</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="切换菜单">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="highlight">欢迎</span>
+                <span class="gradient-text">来到</span>
+                <span class="outline">我的空间</span>
+            </h1>
+            <p class="hero-subtitle">我叫王楠，一名有一年半实习经验的UI设计师，</p>
+            <div class="hero-cta">
+                <a href="#portfolio" class="btn btn-primary">查看作品</a>
+                <a href="#contact" class="btn btn-secondary">联系我</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品集区域 -->
+    <section id="portfolio" class="portfolio">
+        <div class="section-header">
+            <h2 class="section-title">精选作品</h2>
+            <p class="section-subtitle">探索我的设计项目</p>
+        </div>
+
+        <!-- 分类过滤器 -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="web">数据可视化大屏设计</button>
+            <button class="filter-btn" data-filter="app">App 设计</button>
+            <button class="filter-btn" data-filter="branding">AIGC</button>
+        </div>
+
+        <!-- 作品网格 -->
+        <div class="portfolio-grid">
+            <!-- 作品 1 -->
+            <div class="portfolio-item" data-category="web">
+                <div class="portfolio-image">
+                    <img src="image/project 1/缩略图.jpg" alt="数据可视化大屏设计" class="portfolio-thumb">
+                    <div class="portfolio-overlay">
+                        <button class="view-btn" data-project="1">查看详情</button>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>数据可视化大屏设计</h3>
+                    <p>UI 设计</p>
+                    <a href="project1.html" class="full-project-btn">查看完整项目 →</a>
+                </div>
+            </div>
+
+            <!-- 作品 2 -->
+            <div class="portfolio-item" data-category="app">
+                <div class="portfolio-image">
+                    <div class="placeholder-img app">
+                        <img src="image/project 2/缩略图2.jpg" alt="UI设计" class="portfolio-thumb">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <button class="view-btn" data-project="2">查看详情</button>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>飞猪旅行App优化</h3>
+                    <p>UI 设计</p>
+                    <a href="project2.html" class="full-project-btn">查看完整项目 →</a>
+                </div>
+            </div>
+
+            <!-- 作品 3 -->
+            <div class="portfolio-item" data-category="app">
+                <div class="portfolio-image">
+                    <div class="placeholder-img app">
+                        <img src="image/project 3/缩略图3.jpg" alt="UI设计" class="portfolio-thumb">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <button class="view-btn" data-project="3">查看详情</button>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>苏州地铁单兵移动端设计</h3>
+                    <p>UI设计</p>
+                    <a href="project3.html" class="full-project-btn">查看完整项目 →</a>
+                </div>
+            </div>
+
+            <!-- 作品 4 -->
+            <div class="portfolio-item" data-category="app">
+                <div class="portfolio-image">
+                    <div class="placeholder-img web">
+                        <img src="image/project 4/缩略图4.jpg" alt="UI屏设计" class="portfolio-thumb">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <button class="view-btn" data-project="4">查看详情</button>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>人工智能绘画体验设计</h3>
+                    <p>UI 设计</p>
+                    <a href="project4.html" class="full-project-btn">查看完整项目 →</a>
+                </div>
+            </div>
+
+            <!-- 作品 5 -->
+            <div class="portfolio-item" data-category="app">
+                <div class="portfolio-image">
+                    <div class="placeholder-img app">
+                        <img src="image/project 5/缩略图5.jpg" alt="数据可视化大屏设计" class="portfolio-thumb">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <button class="view-btn" data-project="5">查看详情</button>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>低碳出行之公益助农</h3>
+                    <p>UI 设计</p>
+                    <a href="project5.html" class="full-project-btn">查看完整项目 →</a>
+                </div>
+            </div>
+
+            <!-- 作品 6 -->
+            <div class="portfolio-item" data-category="branding">
+                <div class="portfolio-image">
+                    <div class="placeholder-img branding">
+                        <img src="image/project 6/缩略图6.jpg" alt="AIGC" class="portfolio-thumb">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <button class="view-btn" data-project="6">查看详情</button>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>家宅六神</h3>
+                    <p>AIGC</p>
+                    <a href="project6.html" class="full-project-btn">查看完整项目 →</a>
+                </div>
+            </div>
+
+            <!-- 作品 7 -->
+            <div class="portfolio-item" data-category="branding">
+                <div class="portfolio-image">
+                    <div class="placeholder-img branding">
+                        <img src="image/project 7/缩略图7.jpg" alt="AIGC" class="portfolio-thumb">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <button class="view-btn" data-project="7">查看详情</button>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>ROG IP设计</h3>
+                    <p>AIGC</p>
+                    <a href="project7.html" class="full-project-btn">查看完整项目 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我区域 -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="image/avatar.jpg" alt="王楠" class="about-avatar">
+            </div>
+            <div class="about-content">
+                <h2 class="section-title">关于我</h2>
+                <p class="about-text">
+                    你好！我是一名有一年半UI实习经历的设计师（2024.06-2026.02）。未缴纳社保，毕业后在家边实习边考公，今年没考上，后续也不打算再考。我之前是在一家做轨道交通的公司实习过，期间主要做的是app、地铁售票机界面及数据可视化大屏的 ui 设计等，主要涉及B/G端的项目，其中也会夹杂部分制作交互动效的工作。本人喜欢探索新事物，也一直在尝试探索AI的使用，这个网页就是用AI辅助搭建起来的，同时本人做事有规划，自驱力强，能够主动推进日常工作，MBTI是执行官人格。
+                </p>
+
+                <div class="skills-container">
+                    <h3>专业技能</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">UI 设计</span>
+                        <span class="skill-tag">PS</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">AIGC</span>
+                        <span class="skill-tag">用户研究</span>
+                        <span class="skill-tag">动效设计</span>
+                        <span class="skill-tag">creo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系区域 -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2 class="section-title">联系我</h2>
+            <p class="section-subtitle">让我们一起创造精彩</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-links">
+                <div class="contact-link">
+                    <span class="icon">📧</span>
+                    <span>18871325510@163.com</span>
+                </div>
+                <div class="contact-link">
+                    <span class="icon">📱</span>
+                    <span>188 7132 5510</span>
+                </div>
+                <div class="contact-link">
+                    <span class="icon">💬</span>
+                    <span>wn1706</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>&copy; 2026 王楠。18871325510@163.com.</p>
+    </footer>
+
+    <!-- 作品详情模态框 -->
+    <div class="modal" id="project-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="关闭">&times;</button>
+            <button class="modal-nav modal-nav-prev" aria-label="上一个">&#8249;</button>
+            <button class="modal-nav modal-nav-next" aria-label="下一个">&#8250;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="" class="modal-main-img" alt="项目大图">
+                </div>
+                <div class="modal-info">
+                    <h3 class="modal-title">项目名称</h3>
+                    <p class="modal-category">项目类别</p>
+                    <p class="modal-description">项目描述内容...</p>
+                    <div class="modal-tags">
+                        <span class="tag">标签 1</span>
+                        <span class="tag">标签 2</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-counter"></div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
