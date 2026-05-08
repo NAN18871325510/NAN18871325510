@@ -1,0 +1,377 @@
+/* ===== 项目详情页面样式 ===== */
+
+/* 项目头部 */
+.project-header {
+    padding: 150px 5% 80px;
+    text-align: center;
+    background: rgba(255,255,255,0.02);
+}
+
+.back-btn {
+    display: inline-block;
+    color: var(--gray);
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s;
+}
+
+.back-btn:hover {
+    color: var(--primary);
+}
+
+.project-title {
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: 800;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.project-category {
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+/* 项目主体 */
+.project-main {
+    padding: 80px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* 项目介绍 */
+.project-intro {
+    margin-bottom: 60px;
+}
+
+.intro-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-description {
+    color: var(--gray);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-bottom: 1.5rem;
+}
+
+.project-tags {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.project-tags .tag {
+    padding: 0.5rem 1.25rem;
+    background: rgba(99, 102, 241, 0.2);
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* 作品展示区 */
+.project-showcase {
+    margin-bottom: 60px;
+}
+
+.showcase-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.showcase-item {
+    background: rgba(255,255,255,0.03);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.showcase-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+}
+
+.showcase-image {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+
+.placeholder-showcase-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--light);
+}
+
+/* 每个界面的渐变色 */
+.img-1 { background: linear-gradient(135deg, #6366f1, #8b5cf6); }
+.img-2 { background: linear-gradient(135deg, #ec4899, #f59e0b); }
+.img-3 { background: linear-gradient(135deg, #06b6d4, #6366f1); }
+.img-4 { background: linear-gradient(135deg, #8b5cf6, #ec4899); }
+.img-5 { background: linear-gradient(135deg, #f59e0b, #ec4899); }
+.img-6 { background: linear-gradient(135deg, #6366f1, #ec4899); }
+
+/* 如果使用真实图片 */
+.showcase-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.showcase-image {
+    cursor: zoom-in;
+}
+
+.showcase-item:hover .showcase-image img {
+    transform: scale(1.05);
+}
+
+.showcase-caption {
+    padding: 1rem 1.5rem;
+    text-align: center;
+    color: var(--gray);
+    font-size: 0.95rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* 设计说明 */
+.project-details {
+    background: rgba(255,255,255,0.02);
+    padding: 60px 5%;
+    border-radius: 20px;
+}
+
+.project-details h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.details-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.detail-item {
+    padding: 2rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.detail-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--light);
+}
+
+.detail-item p {
+    color: var(--gray);
+    line-height: 1.8;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .project-header {
+        padding: 120px 5% 60px;
+    }
+
+    .project-main {
+        padding: 40px 5%;
+    }
+
+    .showcase-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .details-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== 图片灯箱样式 ===== */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+}
+
+.lightbox-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    z-index: 10;
+}
+
+.lightbox-close:hover {
+    background: rgba(236, 72, 153, 0.8);
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    z-index: 10;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: rgba(99, 102, 241, 0.8);
+}
+
+.lightbox-image-wrapper {
+    max-width: 98%;
+    max-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-img {
+    width: 1000px;
+    max-height: 95vh;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.lightbox-counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+/* 缩略图点击效果 */
+.showcase-image {
+    cursor: pointer;
+    position: relative;
+}
+
+.showcase-image::after {
+    content: '🔍';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.showcase-item:hover .showcase-image::after {
+    opacity: 1;
+}
+
+/* 灯箱移动端适配 */
+@media (max-width: 768px) {
+    .lightbox-prev,
+    .lightbox-next {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    .lightbox-prev {
+        left: 10px;
+    }
+
+    .lightbox-next {
+        right: 10px;
+    }
+
+    .lightbox-image-wrapper {
+        max-width: 95%;
+    }
+
+    .showcase-image::after {
+        display: none;
+    }
+}
